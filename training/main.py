@@ -115,5 +115,5 @@ trainer = Trainer(
 trainer.train()
 
 # Saving
-save_dir = '/models/'
+save_dir = '../models/'
 model.save_pretrained(save_dir + 'fine_tuned_distilbert')
