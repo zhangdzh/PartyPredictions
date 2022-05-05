@@ -46,7 +46,7 @@ split_ds = DatasetDict({
     'test': test_valid['test'],
     'validation': test_valid['train']})
 
-# turn labels into ClassLabel
+# Turn labels into type ClassLabel
 raw_train = train_ds['train']
 new_features_train = raw_train.features.copy()
 new_features_train["labels"] = ClassLabel(names=['democrat', 'republican'])
@@ -115,5 +115,5 @@ trainer = Trainer(
 trainer.train()
 
 # Saving
-save_dir = 'E:/zz2953/Dorothy/models/'
+save_dir = '/models/'
 model.save_pretrained(save_dir + 'fine_tuned_distilbert')
