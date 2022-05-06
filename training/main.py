@@ -5,6 +5,8 @@ import pandas as pd
 import numpy as np
 
 train_df = pd.read_csv('train.csv', encoding='latin1', low_memory=False)
+# train.csv accessible via link
+
 dropped_df = train_df.drop(labels=['bonica.rid',
                                    'congno',
                                    'NID',
